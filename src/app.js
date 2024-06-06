@@ -531,7 +531,8 @@ async function main() {
   } finally {
     const events = recording.replay();
     const content = events.map((e) => `${e.data.join("")}`).join("  \n");
-    push("天翼云盘自动签到任务", content);
+//    push("天翼云盘自动签到任务", content);
+      push(content,"0");
     recording.erase();
   }
 })();
